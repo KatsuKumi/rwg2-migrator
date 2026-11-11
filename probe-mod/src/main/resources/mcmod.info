@@ -1,0 +1,13 @@
+[
+{
+  "modid": "${modId}",
+  "name": "${modName}",
+  "description": "Serves RWG2 terrain samples and chunk generation on a localhost TCP port for the rwg2-migrator tool. Server only; stops itself when the tool exits.",
+  "version": "${modVersion}",
+  "mcversion": "${minecraftVersion}",
+  "url": "",
+  "authorList": ["KatsuKumi"],
+  "credits": "Generation code: Realistic World Gen 2 (GPL-3.0)",
+  "dependencies": ["rwg2"]
+}
+]

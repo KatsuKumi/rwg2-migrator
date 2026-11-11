@@ -1,0 +1,1973 @@
+{
+ "release": "2.9.0",
+ "biomes": [
+  {
+   "id": 0,
+   "name": "Ocean",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 1,
+   "name": "Plains",
+   "temperature": 0.8,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 2,
+   "name": "Desert",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:sand"
+  },
+  {
+   "id": 3,
+   "name": "Extreme Hills",
+   "temperature": 0.2,
+   "rainfall": 0.3,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 4,
+   "name": "Forest",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 5,
+   "name": "Taiga",
+   "temperature": 0.25,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 6,
+   "name": "Swampland",
+   "temperature": 0.8,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 7,
+   "name": "River",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 8,
+   "name": "Hell",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:netherrack",
+   "filler": "minecraft:netherrack"
+  },
+  {
+   "id": 9,
+   "name": "Sky",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:dirt",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 10,
+   "name": "FrozenOcean",
+   "temperature": 0.0,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 11,
+   "name": "FrozenRiver",
+   "temperature": 0.0,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 12,
+   "name": "Ice Plains",
+   "temperature": 0.0,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 13,
+   "name": "Ice Mountains",
+   "temperature": 0.0,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 14,
+   "name": "MushroomIsland",
+   "temperature": 0.9,
+   "rainfall": 1.0,
+   "top": "minecraft:mycelium",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 15,
+   "name": "MushroomIslandShore",
+   "temperature": 0.9,
+   "rainfall": 1.0,
+   "top": "minecraft:mycelium",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 16,
+   "name": "Beach",
+   "temperature": 0.8,
+   "rainfall": 0.4,
+   "top": "minecraft:sand",
+   "filler": "minecraft:sand"
+  },
+  {
+   "id": 17,
+   "name": "DesertHills",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:sand"
+  },
+  {
+   "id": 18,
+   "name": "ForestHills",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 19,
+   "name": "TaigaHills",
+   "temperature": 0.25,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 20,
+   "name": "Extreme Hills Edge",
+   "temperature": 0.2,
+   "rainfall": 0.3,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 21,
+   "name": "Jungle",
+   "temperature": 0.95,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 22,
+   "name": "JungleHills",
+   "temperature": 0.95,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 23,
+   "name": "JungleEdge",
+   "temperature": 0.95,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 24,
+   "name": "Deep Ocean",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 25,
+   "name": "Stone Beach",
+   "temperature": 0.2,
+   "rainfall": 0.3,
+   "top": "minecraft:stone",
+   "filler": "minecraft:stone"
+  },
+  {
+   "id": 26,
+   "name": "Cold Beach",
+   "temperature": 0.05,
+   "rainfall": 0.3,
+   "top": "minecraft:sand",
+   "filler": "minecraft:sand"
+  },
+  {
+   "id": 27,
+   "name": "Birch Forest",
+   "temperature": 0.6,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 28,
+   "name": "Birch Forest Hills",
+   "temperature": 0.6,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 29,
+   "name": "Roofed Forest",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 30,
+   "name": "Cold Taiga",
+   "temperature": -0.5,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 31,
+   "name": "Cold Taiga Hills",
+   "temperature": -0.5,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 32,
+   "name": "Mega Taiga",
+   "temperature": 0.3,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 33,
+   "name": "Mega Taiga Hills",
+   "temperature": 0.3,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 34,
+   "name": "Extreme Hills+",
+   "temperature": 0.2,
+   "rainfall": 0.3,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 35,
+   "name": "Savanna",
+   "temperature": 1.2,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 36,
+   "name": "Savanna Plateau",
+   "temperature": 1.0,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 37,
+   "name": "Mesa",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:stained_hardened_clay"
+  },
+  {
+   "id": 38,
+   "name": "Mesa Plateau F",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:stained_hardened_clay"
+  },
+  {
+   "id": 39,
+   "name": "Mesa Plateau",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:stained_hardened_clay"
+  },
+  {
+   "id": 40,
+   "name": "Alps Forest",
+   "temperature": 0.0,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 41,
+   "name": "Alps",
+   "temperature": 0.0,
+   "rainfall": 0.5,
+   "top": "minecraft:snow",
+   "filler": "minecraft:snow"
+  },
+  {
+   "id": 42,
+   "name": "Arctic",
+   "temperature": 0.05,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 43,
+   "name": "Bamboo Forest",
+   "temperature": 1.2,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 44,
+   "name": "Bayou",
+   "temperature": 0.8,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 45,
+   "name": "Bog",
+   "temperature": 0.5,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 47,
+   "name": "Boreal Forest",
+   "temperature": 0.5,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 48,
+   "name": "Brushland",
+   "temperature": 1.2,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 49,
+   "name": "Canyon",
+   "temperature": 1.0,
+   "rainfall": 0.3,
+   "top": "BiomesOPlenty:hardDirt",
+   "filler": "BiomesOPlenty:hardDirt"
+  },
+  {
+   "id": 50,
+   "name": "Canyon Ravine",
+   "temperature": 1.0,
+   "rainfall": 0.3,
+   "top": "BiomesOPlenty:hardDirt",
+   "filler": "BiomesOPlenty:hardDirt"
+  },
+  {
+   "id": 51,
+   "name": "Chaparral",
+   "temperature": 0.8,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 52,
+   "name": "Cherry Blossom Grove",
+   "temperature": 0.6,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 53,
+   "name": "Coniferous Forest",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 54,
+   "name": "Coral Reef",
+   "temperature": 0.5,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 56,
+   "name": "Crag",
+   "temperature": 1.0,
+   "rainfall": 0.0,
+   "top": "BiomesOPlenty:cragRock",
+   "filler": "BiomesOPlenty:cragRock"
+  },
+  {
+   "id": 57,
+   "name": "Dead Forest",
+   "temperature": 0.4,
+   "rainfall": 0.3,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 58,
+   "name": "Dead Swamp",
+   "temperature": 0.7,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 59,
+   "name": "Deciduous Forest",
+   "temperature": 0.6,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 60,
+   "name": "Dry River",
+   "temperature": 1.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:sand"
+  },
+  {
+   "id": 61,
+   "name": "Eucalyptus Forest",
+   "temperature": 0.9,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 62,
+   "name": "Fen",
+   "temperature": 0.4,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 63,
+   "name": "Flower Field",
+   "temperature": 0.6,
+   "rainfall": 0.7,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 64,
+   "name": "Frost Forest",
+   "temperature": 0.0,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 65,
+   "name": "Fungi Forest",
+   "temperature": 0.9,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 66,
+   "name": "Garden",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "BiomesOPlenty:longGrass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 67,
+   "name": "Glacier",
+   "temperature": 0.0,
+   "rainfall": 0.2,
+   "top": "BiomesOPlenty:hardIce",
+   "filler": "BiomesOPlenty:hardIce"
+  },
+  {
+   "id": 68,
+   "name": "Grassland",
+   "temperature": 0.6,
+   "rainfall": 0.7,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 69,
+   "name": "Grove",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 70,
+   "name": "Heathland",
+   "temperature": 0.8,
+   "rainfall": 0.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 71,
+   "name": "Highland",
+   "temperature": 0.5,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 72,
+   "name": "Jade Cliffs",
+   "temperature": 0.8,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 73,
+   "name": "Kelp Forest",
+   "temperature": 0.5,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 74,
+   "name": "Land of Lakes",
+   "temperature": 0.5,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 75,
+   "name": "Land of Lakes Marsh",
+   "temperature": 0.5,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 76,
+   "name": "Lavender Fields",
+   "temperature": 0.6,
+   "rainfall": 0.7,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 77,
+   "name": "Lush Desert",
+   "temperature": 1.1,
+   "rainfall": 0.5,
+   "top": "minecraft:hardened_clay",
+   "filler": "minecraft:hardened_clay"
+  },
+  {
+   "id": 78,
+   "name": "Lush River",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 79,
+   "name": "Lush Swamp",
+   "temperature": 0.7,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 80,
+   "name": "Mangrove",
+   "temperature": 0.8,
+   "rainfall": 0.9,
+   "top": "minecraft:sand",
+   "filler": "minecraft:sand"
+  },
+  {
+   "id": 81,
+   "name": "Maple Woods",
+   "temperature": 0.2,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 82,
+   "name": "Marsh",
+   "temperature": 0.5,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 83,
+   "name": "Meadow Forest",
+   "temperature": 0.7,
+   "rainfall": 0.7,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 84,
+   "name": "Meadow",
+   "temperature": 0.7,
+   "rainfall": 0.7,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 85,
+   "name": "Moor",
+   "temperature": 0.5,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 86,
+   "name": "Mountain",
+   "temperature": 0.5,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 87,
+   "name": "Mystic Grove",
+   "temperature": 0.7,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 88,
+   "name": "Oasis",
+   "temperature": 2.0,
+   "rainfall": 0.3,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 89,
+   "name": "Ominous Woods",
+   "temperature": 0.5,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 90,
+   "name": "Orchard",
+   "temperature": 0.7,
+   "rainfall": 0.7,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 91,
+   "name": "Origin Valley",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "BiomesOPlenty:originGrass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 92,
+   "name": "Outback",
+   "temperature": 1.3,
+   "rainfall": 0.05,
+   "top": "BiomesOPlenty:hardSand",
+   "filler": "BiomesOPlenty:hardSand"
+  },
+  {
+   "id": 94,
+   "name": "Polar Chasm",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "BiomesOPlenty:hardIce",
+   "filler": "BiomesOPlenty:hardIce"
+  },
+  {
+   "id": 95,
+   "name": "Prairie",
+   "temperature": 0.8,
+   "rainfall": 0.3,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 96,
+   "name": "Quagmire",
+   "temperature": 0.8,
+   "rainfall": 0.9,
+   "top": "BiomesOPlenty:mud",
+   "filler": "BiomesOPlenty:mud"
+  },
+  {
+   "id": 97,
+   "name": "Rainforest",
+   "temperature": 1.0,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 98,
+   "name": "Redwood Forest",
+   "temperature": 0.7,
+   "rainfall": 0.7,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 99,
+   "name": "Sacred Springs",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 100,
+   "name": "Scrubland",
+   "temperature": 1.2,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 101,
+   "name": "Seasonal Forest Clearing",
+   "temperature": 0.5,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 102,
+   "name": "Seasonal Forest",
+   "temperature": 0.5,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 103,
+   "name": "Shield",
+   "temperature": 0.5,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 104,
+   "name": "Shrubland",
+   "temperature": 0.6,
+   "rainfall": 0.05,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 105,
+   "name": "Silkglades",
+   "temperature": 0.5,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 106,
+   "name": "Sludgepit",
+   "temperature": 0.8,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 107,
+   "name": "Snowy Coniferous Forest",
+   "temperature": 0.0,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 108,
+   "name": "Spectral Garden",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "BiomesOPlenty:bopGrass",
+   "filler": "minecraft:end_stone"
+  },
+  {
+   "id": 109,
+   "name": "Spruce Woods",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 110,
+   "name": "Steppe",
+   "temperature": 0.7,
+   "rainfall": 0.05,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 111,
+   "name": "Temperate Rainforest",
+   "temperature": 0.8,
+   "rainfall": 1.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 112,
+   "name": "Thicket",
+   "temperature": 0.6,
+   "rainfall": 0.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 113,
+   "name": "Tropical Rainforest",
+   "temperature": 1.2,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 114,
+   "name": "Tropics",
+   "temperature": 1.2,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 115,
+   "name": "Tundra",
+   "temperature": 0.2,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 117,
+   "name": "Visceral Heap",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "BiomesOPlenty:flesh",
+   "filler": "BiomesOPlenty:flesh"
+  },
+  {
+   "id": 118,
+   "name": "Volcano",
+   "temperature": 2.0,
+   "rainfall": 0.05,
+   "top": "BiomesOPlenty:ashStone",
+   "filler": "BiomesOPlenty:ashStone"
+  },
+  {
+   "id": 119,
+   "name": "Wasteland",
+   "temperature": 1.0,
+   "rainfall": 0.05,
+   "top": "BiomesOPlenty:driedDirt",
+   "filler": "BiomesOPlenty:driedDirt"
+  },
+  {
+   "id": 120,
+   "name": "Wetland",
+   "temperature": 0.6,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 121,
+   "name": "Woodland",
+   "temperature": 0.6,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 122,
+   "name": "Xeric Shrubland",
+   "temperature": 1.0,
+   "rainfall": 0.2,
+   "top": "minecraft:sand",
+   "filler": "minecraft:sand"
+  },
+  {
+   "id": 123,
+   "name": "Dense Forest",
+   "temperature": 0.7,
+   "rainfall": 0.7,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 126,
+   "name": "Ocean Oil Field",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 127,
+   "name": "Desert Oil Field",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:sand"
+  },
+  {
+   "id": 128,
+   "name": "Boneyard",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:netherrack",
+   "filler": "minecraft:netherrack"
+  },
+  {
+   "id": 129,
+   "name": "Sunflower Plains",
+   "temperature": 0.8,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 130,
+   "name": "Desert M",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:sand"
+  },
+  {
+   "id": 131,
+   "name": "Extreme Hills M",
+   "temperature": 0.2,
+   "rainfall": 0.3,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 132,
+   "name": "Flower Forest",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 133,
+   "name": "Taiga M",
+   "temperature": 0.25,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 134,
+   "name": "Swampland M",
+   "temperature": 0.8,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 135,
+   "name": "Storage Cell",
+   "temperature": -100.0,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 136,
+   "name": "Corrupted Sands",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:soul_sand",
+   "filler": "minecraft:soul_sand"
+  },
+  {
+   "id": 137,
+   "name": "Phantasmagoric Inferno",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "BiomesOPlenty:ash",
+   "filler": "BiomesOPlenty:ash"
+  },
+  {
+   "id": 138,
+   "name": "Undergarden",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "BiomesOPlenty:overgrownNetherrack",
+   "filler": "minecraft:netherrack"
+  },
+  {
+   "id": 140,
+   "name": "Ice Plains Spikes",
+   "temperature": 0.0,
+   "rainfall": 0.5,
+   "top": "minecraft:snow",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 141,
+   "name": "moon",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 142,
+   "name": "marsFlat",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 143,
+   "name": "asteroids",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 144,
+   "name": "space",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 149,
+   "name": "Jungle M",
+   "temperature": 0.95,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 151,
+   "name": "JungleEdge M",
+   "temperature": 0.95,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 155,
+   "name": "Birch Forest M",
+   "temperature": 0.6,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 156,
+   "name": "Birch Forest Hills M",
+   "temperature": 0.6,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 157,
+   "name": "Roofed Forest M",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 158,
+   "name": "Cold Taiga M",
+   "temperature": -0.5,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 160,
+   "name": "Mega Spruce Taiga",
+   "temperature": 0.25,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 160,
+   "name": "Mega Spruce Taiga",
+   "temperature": 0.25,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 162,
+   "name": "Extreme Hills+ M",
+   "temperature": 0.2,
+   "rainfall": 0.3,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 163,
+   "name": "Savanna M",
+   "temperature": 1.1,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 164,
+   "name": "Savanna Plateau M",
+   "temperature": 1.0,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 165,
+   "name": "Mesa (Bryce)",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:stained_hardened_clay"
+  },
+  {
+   "id": 166,
+   "name": "Mesa Plateau F M",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:stained_hardened_clay"
+  },
+  {
+   "id": 167,
+   "name": "Mesa Plateau M",
+   "temperature": 2.0,
+   "rainfall": 0.0,
+   "top": "minecraft:sand",
+   "filler": "minecraft:stained_hardened_clay"
+  },
+  {
+   "id": 170,
+   "name": "Twilight Clearing",
+   "temperature": 0.8,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 171,
+   "name": "Dark Forest",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 172,
+   "name": "Dark Forest Center",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 173,
+   "name": "Deep Mushroom Forest",
+   "temperature": 0.8,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 175,
+   "name": "Fire Swamp",
+   "temperature": 1.0,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 176,
+   "name": "Twilight Glacier",
+   "temperature": 0.0,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 177,
+   "name": "Twilight Highlands",
+   "temperature": 0.4,
+   "rainfall": 0.7,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 178,
+   "name": "Highlands Center",
+   "temperature": 0.3,
+   "rainfall": 0.2,
+   "top": "TwilightForest:tile.TFDeadrock",
+   "filler": "TwilightForest:tile.TFDeadrock"
+  },
+  {
+   "id": 179,
+   "name": "Twilight Lake",
+   "temperature": 0.66,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 180,
+   "name": "Firefly Forest",
+   "temperature": 0.5,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 181,
+   "name": "Mushroom Forest",
+   "temperature": 0.8,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 182,
+   "name": "Oak Savanna",
+   "temperature": 0.9,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 184,
+   "name": "Twilight Stream",
+   "temperature": 0.5,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 185,
+   "name": "Twilight Swamp",
+   "temperature": 0.8,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 186,
+   "name": "Thornlands",
+   "temperature": 0.3,
+   "rainfall": 0.2,
+   "top": "TwilightForest:tile.TFDeadrock",
+   "filler": "TwilightForest:tile.TFDeadrock"
+  },
+  {
+   "id": 187,
+   "name": "Twilight Forest",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 188,
+   "name": "Dense Twilight Forest",
+   "temperature": 0.7,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 189,
+   "name": "Enchanted Forest",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 190,
+   "name": "Eerie",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 191,
+   "name": "Eldritch",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:dirt",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 192,
+   "name": "Magical Forest",
+   "temperature": 0.7,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 193,
+   "name": "Tainted Land",
+   "temperature": 0.5,
+   "rainfall": 0.5,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 196,
+   "name": "Snowy Forest",
+   "temperature": 0.125,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 199,
+   "name": "Toxic Everglades",
+   "temperature": 0.5,
+   "rainfall": 0.7,
+   "top": "ToxicEverglades:blockDarkWorldGround",
+   "filler": "ToxicEverglades:blockDarkWorldGround2"
+  },
+  {
+   "id": 200,
+   "name": "Ice River",
+   "temperature": 0.0,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 201,
+   "name": "Space",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 202,
+   "name": "Cold River",
+   "temperature": 0.5,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 203,
+   "name": "Venus",
+   "temperature": 1.0,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:venusblocks",
+   "filler": "GalaxySpace:venusblocks"
+  },
+  {
+   "id": 204,
+   "name": "Pluto",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:plutoblocks",
+   "filler": "GalaxySpace:plutoblocks"
+  },
+  {
+   "id": 205,
+   "name": "Temperate River",
+   "temperature": 0.8,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 206,
+   "name": "Pluto2",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:plutoblocks",
+   "filler": "GalaxySpace:plutoblocks"
+  },
+  {
+   "id": 207,
+   "name": "Hot River",
+   "temperature": 0.8,
+   "rainfall": 0.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 208,
+   "name": "Pluto3",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:plutoblocks",
+   "filler": "GalaxySpace:plutoblocks"
+  },
+  {
+   "id": 209,
+   "name": "Wet River",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 210,
+   "name": "Pluto4",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:plutoblocks",
+   "filler": "GalaxySpace:plutoblocks"
+  },
+  {
+   "id": 211,
+   "name": "River Oasis",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 212,
+   "name": "Kuiper Belt",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 213,
+   "name": "Ice Ocean",
+   "temperature": 0.0,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 214,
+   "name": "Cold Ocean",
+   "temperature": 0.5,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 215,
+   "name": "Io",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:ioblocks",
+   "filler": "GalaxySpace:ioblocks"
+  },
+  {
+   "id": 216,
+   "name": "Temperate Ocean",
+   "temperature": 0.8,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 217,
+   "name": "IoAsh",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:ioblocks",
+   "filler": "GalaxySpace:ioblocks"
+  },
+  {
+   "id": 218,
+   "name": "Hot Ocean",
+   "temperature": 0.8,
+   "rainfall": 0.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 219,
+   "name": "Titan",
+   "temperature": 0.5,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:titanblocks",
+   "filler": "GalaxySpace:titanblocks"
+  },
+  {
+   "id": 220,
+   "name": "BarnardaCShores",
+   "temperature": 1.16,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:barnardaCgrass",
+   "filler": "GalaxySpace:barnardaCdirt"
+  },
+  {
+   "id": 221,
+   "name": "BarnardaCHills",
+   "temperature": 1.16,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:barnardaCgrass",
+   "filler": "GalaxySpace:barnardaCdirt"
+  },
+  {
+   "id": 222,
+   "name": "BarnardaCLowPlains",
+   "temperature": 1.16,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:barnardaCgrass",
+   "filler": "GalaxySpace:barnardaCdirt"
+  },
+  {
+   "id": 223,
+   "name": "Ocean Oasis",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 224,
+   "name": "Snow Desert",
+   "temperature": 0.0,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 225,
+   "name": "Snow Forest",
+   "temperature": 0.0,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 226,
+   "name": "Cold Plains",
+   "temperature": 0.2,
+   "rainfall": 0.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 227,
+   "name": "Cold Forest",
+   "temperature": 0.5,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 228,
+   "name": "Hot Plains",
+   "temperature": 0.9,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 229,
+   "name": "Hot Forest",
+   "temperature": 0.8,
+   "rainfall": 0.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 230,
+   "name": "Hot Desert",
+   "temperature": 1.0,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 231,
+   "name": "Plains (RWG)",
+   "temperature": 0.6,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 232,
+   "name": "Tropical Island",
+   "temperature": 0.8,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 233,
+   "name": "Redwood",
+   "temperature": 0.7,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 234,
+   "name": "Jungle (RWG)",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 235,
+   "name": "Oasis",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 236,
+   "name": "Temperate Forest",
+   "temperature": 0.8,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 237,
+   "name": "Wet Ocean",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 238,
+   "name": "BarnardaCFlowers",
+   "temperature": 1.16,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:barnardaCgrass",
+   "filler": "GalaxySpace:barnardaCdirt"
+  },
+  {
+   "id": 239,
+   "name": "BarnardaCOceans",
+   "temperature": 1.16,
+   "rainfall": 0.0,
+   "top": "GalaxySpace:barnardaCgrass",
+   "filler": "GalaxySpace:barnardaCdirt"
+  },
+  {
+   "id": 300,
+   "name": "Ice River",
+   "temperature": 0.0,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 301,
+   "name": "Cold River",
+   "temperature": 0.5,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 302,
+   "name": "Temperate River",
+   "temperature": 0.8,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 303,
+   "name": "Hot River",
+   "temperature": 0.8,
+   "rainfall": 0.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 304,
+   "name": "Wet River",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 305,
+   "name": "River Oasis",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 306,
+   "name": "Ice Ocean",
+   "temperature": 0.0,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 307,
+   "name": "Cold Ocean",
+   "temperature": 0.5,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 308,
+   "name": "Temperate Ocean",
+   "temperature": 0.8,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 309,
+   "name": "Hot Ocean",
+   "temperature": 0.8,
+   "rainfall": 0.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 310,
+   "name": "Wet Ocean",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 311,
+   "name": "Ocean Oasis",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 312,
+   "name": "Snow Desert",
+   "temperature": 0.0,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 313,
+   "name": "Snow Forest",
+   "temperature": 0.0,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 314,
+   "name": "Cold Plains",
+   "temperature": 0.2,
+   "rainfall": 0.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 315,
+   "name": "Cold Forest",
+   "temperature": 0.5,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 316,
+   "name": "Hot Plains",
+   "temperature": 0.9,
+   "rainfall": 0.1,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 317,
+   "name": "Hot Forest",
+   "temperature": 0.8,
+   "rainfall": 0.2,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 318,
+   "name": "Hot Desert",
+   "temperature": 1.0,
+   "rainfall": 0.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 319,
+   "name": "Plains (RWG)",
+   "temperature": 0.6,
+   "rainfall": 0.4,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 320,
+   "name": "Tropical Island",
+   "temperature": 0.8,
+   "rainfall": 0.8,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 321,
+   "name": "Redwood",
+   "temperature": 0.7,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 322,
+   "name": "Jungle (RWG)",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 323,
+   "name": "Oasis",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 324,
+   "name": "Temperate Forest",
+   "temperature": 0.8,
+   "rainfall": 0.6,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 325,
+   "name": "Jungle Mesa",
+   "temperature": 0.9,
+   "rainfall": 1.0,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 326,
+   "name": "High Rainforest",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 327,
+   "name": "Jungle Hills",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 328,
+   "name": "Jungle Canyon",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  },
+  {
+   "id": 329,
+   "name": "Redwood Jungle",
+   "temperature": 0.9,
+   "rainfall": 0.9,
+   "top": "minecraft:grass",
+   "filler": "minecraft:dirt"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "about": "Tile-entity types and owner names in chunks only the world generator wrote (InhabitedTime 0), and structures: types a mod's structure code places that no sampled chunk held, each with its evidence; dev/sample_worldgen.py",
+ "sources": [
+  {
+   "world": "the tool's generator: RWG2 Smooth with structures, 161 x 161 chunks around 0,0",
+   "chunks": 25921,
+   "tile_entities": 32888
+  },
+  {
+   "world": "the tool's generator: RWG2 Smooth with structures, 161 x 161 chunks around 12000,-12000",
+   "chunks": 26558,
+   "tile_entities": 17029
+  },
+  {
+   "world": "a GTNH 2.9.0 server's RWG2 pregeneration",
+   "chunks": 1717,
+   "tile_entities": 1858
+  },
+  {
+   "world": "the never-visited chunks of a pre-RWG2 world (the old generator)",
+   "chunks": 682,
+   "tile_entities": 114025
+  }
+ ],
+ "types": {
+  "BlockSkyChest": 11,
+  "CastingBasin": 8,
+  "CastingTable": 8,
+  "Cauldron": 3,
+  "Chest": 2997,
+  "Comparator": 24,
+  "CraftingStation": 11,
+  "Dropper": 24,
+  "EnchantTable": 3,
+  "FlowerPot": 140,
+  "Furnace": 40,
+  "GT_TileEntity_Ores": 113589,
+  "Hopper": 48,
+  "LOOTGAMES_MASTER_TE": 90,
+  "MobSpawner": 2966,
+  "Music": 12,
+  "PartCrafter": 11,
+  "PatternHolder": 11,
+  "PatternShaper": 11,
+  "RecordPlayer": 11,
+  "Sign": 11,
+  "Skull": 490,
+  "TConstruct.Servants": 228,
+  "TileBanner": 10,
+  "TileEldritchAltar": 18,
+  "TileEldritchCap": 144,
+  "TileEldritchObelisk": 18,
+  "TileExtendedNode": 1533,
+  "TileNode": 60,
+  "ToolStation": 11,
+  "Trap": 98,
+  "WritingDeskTile": 8,
+  "doorTileEntity": 486,
+  "etfuturum.banner": 8,
+  "etfuturum.barrel": 6,
+  "etfuturum.blast_furnace": 2,
+  "etfuturum.cave_vines": 3724,
+  "etfuturum.glow_lichen": 37378,
+  "etfuturum.smoker": 5,
+  "fenceGateTileEntity": 3,
+  "forestry.Apiary": 4,
+  "forestry.Escritoire": 1,
+  "forestry.Swarm": 439,
+  "forestry.Wood": 308,
+  "tile.projectred.exploration.lily|0": 335,
+  "trapDoorTileEntity": 452,
+  "witchery:wallgen": 2
+ },
+ "owners": {},
+ "structures": {
+  "etfuturum.brewing_stand": "Roguelike Dungeons (roguelike-1.6.6-GTNH): its lab and B-team rooms place Blocks.brewing_stand (worldgen/blocks/BrewingStand), which Et Futurum's brewing stand replaces; seen in two Roguelike dungeons of a pre-RWG2 world",
+  "gol_master": "LootGames (lootgames-2.2.14): a LootGames dungeon's puzzle master (LOOTGAMES_MASTER_TE, sampled) turns into this game board when a player plays it (PuzzleMasterBlock -> GameManager.generateRandomGame -> the game's activator block)",
+  "ms_master": "LootGames (lootgames-2.2.14): a LootGames dungeon's puzzle master (LOOTGAMES_MASTER_TE, sampled) turns into this game board when a player plays it (PuzzleMasterBlock -> GameManager.generateRandomGame -> the game's activator block)",
+  "sdk_master": "LootGames (lootgames-2.2.14): a LootGames dungeon's puzzle master (LOOTGAMES_MASTER_TE, sampled) turns into this game board when a player plays it (PuzzleMasterBlock -> GameManager.generateRandomGame -> the game's activator block)"
+ }
+}

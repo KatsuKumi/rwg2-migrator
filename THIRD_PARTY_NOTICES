@@ -1,0 +1,48 @@
+rwg2-migrator - third-party notices
+
+rwg2-migrator is free software under the GNU General Public License version 3 or later (see LICENSE). Its source code is at the
+release page this download came from: every release links the source of exactly that version.
+
+The downloadable app bundles the components below. The full text of each license is in the licenses/ folder next to the
+program: copied from each Python package's own distribution when the app is built, and for the libraries below CPython from
+dev/licenses/ in the source. The build refuses a native file that no row here covers, and GNU readline (GPL-3.0-only) is
+left out of every build.
+
+Component                     License                                                   Folder in licenses/
+----------------------------  --------------------------------------------------------  -------------------
+CPython 3.12                  Python Software Foundation License Version 2 (on Windows  python/
+                              its file also holds the conditions for the Microsoft C
+                              runtime DLLs it ships with: vcruntime140, ucrtbase,
+                              api-ms-win-*)
+Libraries CPython's modules use, each in the builds that bundle it:
+  OpenSSL 3                   Apache-2.0                                                openssl/
+  zlib                        zlib                                                      zlib/
+  bzip2                       bzip2 (BSD-style)                                         bzip2/
+  xz (liblzma)                public domain                                             xz/
+  libffi                      MIT                                                       libffi/
+  expat                       MIT                                                       expat/
+  mpdecimal (libmpdec)        BSD-2-Clause                                              mpdecimal/
+  SQLite                      public domain                                             sqlite/
+  ncurses (libtinfo)          MIT-style (X11)                                           ncurses/
+  GCC runtime (libstdc++,     GPL-3.0 with the GCC Runtime Library Exception            gcc-runtime/
+  libgcc_s; Linux builds)
+numpy                         BSD-3-Clause; its wheels bundle OpenBLAS and LAPACK          numpy/
+                              (BSD-3-Clause) and the gfortran runtime (GPL-3.0 with the
+                              GCC Runtime Library Exception); every text is in its folder
+Pillow                        MIT-CMU (HPND); its wheels bundle libjpeg-turbo, libpng,     pillow/
+                              zlib, libtiff, libwebp, Little CMS, OpenJPEG, FreeType,
+                              HarfBuzz, Brotli and others under their own licenses, all
+                              listed in that file
+psutil                        BSD-3-Clause                                              psutil/
+PyInstaller bootloader        GPL-2.0-or-later with the PyInstaller bootloader          pyinstaller/
+                              exception
+Leaflet 1.9.4                 BSD-2-Clause                                              (bundled as rwg2migrator/web/static/leaflet/LICENSE)
+
+Not bundled:
+- The GTNH server pack, Minecraft and Forge are downloaded by the tool from the official GTNH site
+  (downloads.gtnewhorizons.com) on your machine, after you accept the Minecraft EULA. They are never redistributed with
+  rwg2-migrator.
+- A Java runtime, when your machine has none that fits, is downloaded from Eclipse Adoptium (api.adoptium.net, GPL-2.0 with
+  the Classpath Exception).
+- The small server-side mod rwg2probe (rwg2migrator/data/rwg2probe-*.jar) is part of this project, GPL-3.0-or-later; its
+  source is in probe-mod/.

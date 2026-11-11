@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="token" content="__TOKEN__">
+<title>rwg2-migrator</title>
+<link rel="stylesheet" href="/static/leaflet/leaflet.css?t=__TOKEN__">
+<link rel="stylesheet" href="/static/style.css?t=__TOKEN__">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="mark"></span>rwg2-migrator</div>
+  <nav id="steps" aria-label="Steps">
+    <button data-go="home">Home</button>
+    <button data-go="world">1 World</button>
+    <button data-go="area">2 Area to keep</button>
+    <button data-go="matches">3 Best matches</button>
+    <button data-go="preview">4 Preview</button>
+    <button data-go="apply">5 Apply</button>
+    <button data-go="verify">Verify</button>
+  </nav>
+  <div id="busy" class="busy" hidden><span class="spin"></span><span id="busy-text"></span><button id="busy-stop" class="link">Stop</button></div>
+</header>
+
+<main>
+<section id="screen-home" class="screen page">
+  <h1>Move your GTNH world to RWG2 Smooth, and keep your base exactly as it is</h1>
+  <p class="lead">You choose the chunks to keep. The tool looks for the RWG2 terrain that fits around them best, shows it to you on a map, builds the new world in a working copy and swaps it in only when you say so. Your current world is kept as the backup.</p>
+  <p class="stopnote"><b>One rule:</b> close the game or stop the server before you start, and keep it closed until Apply is done.</p>
+  <div id="home-inuse"></div>
+  <div class="row"><button id="home-start" class="primary">Start with a world</button></div>
+  <div id="home-continue" class="block" hidden>
+    <h2>Continue where you left off</h2>
+    <p class="muted">These steps stopped before they finished (the window was closed, the computer restarted, or the step was stopped). Continue picks them up from their last checkpoint.</p>
+    <ul id="home-jobs" class="jobs"></ul>
+  </div>
+  <div id="home-done" class="block" hidden>
+    <h2>Finished steps</h2>
+    <ul id="home-finished" class="jobs"></ul>
+  </div>
+  <div id="home-recent" class="block" hidden>
+    <h2>Recent worlds</h2>
+    <ul id="home-worlds" class="jobs"></ul>
+  </div>
+</section>
+
+<section id="screen-world" class="screen page" hidden>
+  <h1>Which world?</h1>
+  <p class="stopnote"><b>One rule:</b> close the game or stop the server before you start, and keep it closed until Apply is done.</p>
+  <div class="two">
+    <div>
+      <h2>Single-player saves found on this computer</h2>
+      <ul id="world-saves" class="jobs"><li class="muted">Looking for saves…</li></ul>
+      <h2>Or a server, a save or a world folder</h2>
+      <div class="row">
+        <input id="world-path" type="text" placeholder="Paste the folder, for example D:\server or …\saves\My World" aria-label="World folder">
+        <button id="world-browse">Browse…</button>
+        <button id="world-open" class="primary">Open</button>
+      </div>
+      <label class="tick"><input id="world-remote" type="checkbox"> I copied this from another machine (a rented server or another computer)</label>
+      <p class="muted small">Opening a world only reads it. Nothing is changed until you click Apply at the end.</p>
+      <p id="world-generator" class="muted small"></p>
+    </div>
+    <div>
+      <div id="world-card" class="card" hidden></div>
+      <div id="world-config" class="block" hidden>
+        <h2>Config folder</h2>
+        <p id="world-config-text" class="small"></p>
+        <div class="row">
+          <input id="world-config-path" type="text" placeholder="Optional, for example D:\server\config" aria-label="Config folder">
+          <button id="world-config-browse">Browse…</button>
+          <button id="world-config-use">Use</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="world-next" class="block" hidden>
+    <h2>What it needs</h2>
+    <table class="needs">
+      <tr><th>Step</th><th>Time</th></tr>
+      <tr><td>Download the GTNH server pack (once per GTNH version)</td><td>568 MB, about 1 minute at 100 Mbit/s</td></tr>
+      <tr><td>Each start of the generator</td><td>about 1 to 2.5 minutes (the first start, which also checks the generator, is the longest)</td></tr>
+      <tr><td>Map of your world</td><td>half a minute to 3 minutes for 72,000 chunks</td></tr>
+      <tr><td>Best-match search</td><td>15 to 30 minutes, the first search included (it also downloads and sets up the generator)</td></tr>
+      <tr><td>Preview: the new terrain, smoothing and the checks</td><td>about 4.5 minutes</td></tr>
+      <tr><td>Apply (your world must be stopped)</td><td>about half a minute, longer for a very large world</td></tr>
+    </table>
+    <p class="muted small">The generator needs about 4 GB of free memory while it runs, and about 1.2 GB of disk space.</p>
+    <label class="tick"><input id="world-eula" type="checkbox"> I accept the <a href="https://aka.ms/MinecraftEULA" target="_blank" rel="noopener">Minecraft EULA</a>. The tool runs the official GTNH server pack, without a window, to make the new terrain.</label>
+    <div class="row"><button id="world-zip" class="ghost">I already have the GTNH server zip…</button><button id="world-continue" class="primary" disabled>Continue: choose the area to keep</button></div>
+  </div>
+</section>
+
+<section id="screen-area" class="screen split" hidden>
+  <aside class="panel">
+    <h1>Area to keep</h1>
+    <p class="muted small">The chunks you choose stay exactly as they are. A safety margin around them keeps its old terrain too. Its outer edge is smoothed into the new terrain: where the ground is reshaped, plants, animals and loose items are removed.</p>
+    <p class="stopnote small"><b>One rule:</b> close the game or stop the server before you start, and keep it closed until Apply is done.</p>
+    <div class="tools" role="radiogroup" aria-label="Tool">
+      <button data-tool="move" class="on" title="Drag the map">Move</button>
+      <button data-tool="paint" title="Click or drag to keep chunks">Paint</button>
+      <button data-tool="erase" title="Click or drag to stop keeping chunks">Erase</button>
+      <button data-tool="rect" title="Drag a rectangle to keep (hold Shift to erase)">Rectangle</button>
+    </div>
+    <label class="field">Brush <select id="area-brush"><option value="1">1 chunk</option><option value="3">3 × 3 chunks</option><option value="5">5 × 5 chunks</option></select></label>
+    <div id="area-teams" class="block" hidden>
+      <h2>Claims (ServerUtilities)</h2>
+      <p class="muted small">Tick the teams whose claims you keep, or click Import claims with none ticked to keep every team's.</p>
+      <div id="area-team-list"></div>
+      <button id="area-claims" class="primary small-btn">Import claims</button>
+    </div>
+    <div class="block">
+      <button id="area-suggest">Suggest from where you've played</button>
+      <button id="area-clear" class="ghost">Clear</button>
+      <div id="area-extra" hidden></div>
+    </div>
+    <label class="field">Safety margin: <b id="area-margin-v">1 chunk</b><input id="area-margin" type="range" min="1" max="4" value="1"></label>
+    <div class="counts">
+      <div><b id="c-core">0</b><span>protected chunks (kept as they are)</span></div>
+      <div><b id="c-kept">0</b><span>kept with the margin</span></div>
+      <div><b id="c-never">0</b><span>never explored (they become new terrain)</span></div>
+    </div>
+    <p id="area-unreadable" class="warn" role="alert" hidden></p>
+    <p id="area-parts" class="warn" role="alert" hidden></p>
+    <div class="block">
+      <h2>Will be removed</h2>
+      <ul id="area-removed" class="removed"><li class="muted">Choose chunks to keep first.</li></ul>
+    </div>
+    <div class="row end"><button id="area-continue" class="primary" disabled>Continue: find the best matches</button></div>
+  </aside>
+  <div class="mapwrap"><div id="area-map" class="map"></div></div>
+</section>
+
+<section id="screen-matches" class="screen split" hidden>
+  <aside class="panel">
+    <h1>Best matches</h1>
+    <p class="stopnote small"><b>One rule:</b> close the game or stop the server before you start, and keep it closed until Apply is done.</p>
+    <div id="m-changed" class="notice" role="status" hidden><p id="m-changed-text"></p><button id="m-changed-again" class="primary small-btn">Search again for this area</button></div>
+    <div id="m-setup">
+      <div class="base"><span id="m-swatch" class="swatch"></span>Your base looks like: <select id="m-base" aria-label="Your base looks like"></select></div>
+      <h2>Looks I don't want near my base</h2>
+      <div id="m-looks" class="looks"></div>
+      <label class="field">How picky: <span class="muted">strict</span><input id="m-tolerance" type="range" min="0.5" max="2" step="0.25" value="1"><span class="muted">tolerant</span></label>
+      <p id="m-noconfig" class="muted small" hidden>No config folder: the search uses GTNH's default RWG2 settings. If you have the config folder of your server or game instance, pick it on the World screen.</p>
+      <p id="m-eula" class="warn small" hidden>Tick "I accept the Minecraft EULA" on the World screen first: the search runs the official GTNH server pack.</p>
+      <div class="row"><button id="m-start" class="primary">Find the best matches</button></div>
+    </div>
+    <div id="m-progress" class="progress" hidden>
+      <div class="row between"><b id="m-stage"></b><span id="m-time" class="muted"></span></div>
+      <div class="bar"><i id="m-bar"></i></div>
+      <p class="muted small">The search usually takes 15 to 30 minutes. The cards below show the best matches so far and change as better ones are found.</p>
+      <div id="m-excellent" class="good" hidden>Excellent match found: you can stop now and keep the best so far.</div>
+      <div class="row"><button id="m-stop">Stop and use best so far</button></div>
+    </div>
+    <div id="m-stopped" class="progress" hidden>
+      <p id="m-stopped-text"></p>
+      <div class="row"><button id="m-continue" class="primary">Continue the search</button><button id="m-stopped-again" class="ghost">Search again</button></div>
+    </div>
+    <div id="m-cards" class="cards"></div>
+    <p id="m-badges" class="muted small" hidden>Recommended: the best-ranked excellent match or, if there is none, the best-ranked one whose border is not rough (none if every border is rough). Excellent: most steps at the border 1 block or less, at most 10% over 10 blocks, and at least 70% of the edge looks like your base.</p>
+    <div id="m-more" class="row" hidden><button id="m-alts" class="ghost">Show more alternatives</button><button id="m-again" class="ghost">Search again</button></div>
+  </aside>
+  <div class="mapwrap stack">
+    <div id="m-compare" class="compare"></div>
+    <details id="m-metrics" class="metrics" open hidden><summary id="m-metrics-title"></summary><div id="m-metrics-body"></div></details>
+  </div>
+</section>
+
+<section id="screen-preview" class="screen split" hidden>
+  <aside class="panel">
+    <h1>Preview</h1>
+    <div id="p-choice" class="card"></div>
+    <div id="p-setup" hidden>
+      <label class="tick"><input id="p-trees" type="checkbox"> Replant trees on the reshaped border (about 1.5 minutes more)</label>
+      <label class="tick"><input id="p-blend" type="checkbox"> Blend the biomes at the border, so grass colour has no straight line</label>
+      <p class="muted small">Both are new and not yet tried in game by the authors; they are off unless you tick them.</p>
+      <p id="p-noconfig" class="muted small" hidden>No config folder: the preview uses GTNH's default RWG2 settings, and Apply will show the 4 lines to add to config/rwg2.cfg by hand.</p>
+      <label id="p-populated-row" class="tick" hidden><input id="p-populated" type="checkbox"> <span id="p-populated-text"></span></label>
+      <div class="row"><button id="p-start" class="primary">Build the preview</button></div>
+    </div>
+    <p class="stopnote small"><b>One rule:</b> close the game or stop the server before you start, and keep it closed until Apply is done.</p>
+    <ol id="p-steps" class="steps"></ol>
+    <div id="p-result" hidden></div>
+    <div class="row end"><button id="p-apply" class="primary" hidden>Continue: Apply</button></div>
+  </aside>
+  <div class="mapwrap"><div id="p-compare" class="compare"></div></div>
+</section>
+
+<section id="screen-apply" class="screen page" hidden>
+  <h1>Apply</h1>
+  <p class="stopnote"><b>One rule:</b> close the game or stop the server before you start, and keep it closed until Apply is done.</p>
+  <p class="lead">Your world is swapped for the preview. The world you have now is kept, renamed, as the backup.</p>
+  <ul id="a-list" class="checklist"></ul>
+  <div class="row"><button id="a-check">Check again</button><button id="a-go" class="primary" disabled>Apply now</button></div>
+  <div id="a-progress" class="progress" hidden><b id="a-stage">Applying…</b><div class="bar"><i class="indeterminate"></i></div></div>
+</section>
+
+<section id="screen-after" class="screen page" hidden>
+  <p id="after-none" class="lead" hidden></p>
+  <div id="after-body" hidden>
+  <h1>Your world now uses RWG2 Smooth</h1>
+  <p id="after-core" class="lead"></p>
+  <p id="after-byhand" class="warn" hidden></p>
+  <div class="rule">
+    <h2>First rule: after every GTNH update, open this tool and run Verify, or set these 4 lines again in the "expert / worldgen migration" section of config/rwg2.cfg</h2>
+    <p class="small">A GTNH update replaces the config folder. Without these lines every new chunk beyond the generated area uses no offset, and cliffs appear about 8 chunks out, which cannot be undone for chunks already generated.</p>
+    <p class="small">The 4 lines go inside that section, between its braces, in place of the lines with the same names.</p>
+    <pre id="after-lines"></pre>
+    <button id="after-copy-lines">Copy the 4 lines</button>
+  </div>
+  <h2>Other rules</h2>
+  <ul id="after-rules"></ul>
+  <h2>Your map</h2>
+  <p id="after-map"></p>
+  <div id="after-upload" class="block" hidden>
+    <h2>Upload checklist</h2>
+    <ol id="after-steps"></ol>
+  </div>
+  <div class="block">
+    <h2>Your world from before Apply</h2>
+    <p id="after-backup"></p>
+    <div class="row"><button id="after-open">Open folder</button><button id="after-verify" class="primary">Go to Verify</button></div>
+  </div>
+  </div>
+</section>
+
+<section id="screen-verify" class="screen split" hidden>
+  <aside class="panel">
+    <h1>Verify</h1>
+    <p id="v-world" class="muted small"></p>
+    <p>Checks that config/rwg2.cfg still holds the 4 lines of the migration, that no old region file came back with an upload, and that the chunks generated since Apply follow the preview. It only reads, unless you click a fix.</p>
+    <p class="muted small">The map: PREVIEW is the new terrain as the preview drew it, NOW your world as it is, with the step at the kept border; BEFORE APPLY is in the menus.</p>
+    <div class="row"><button id="v-run" class="primary">Check my world</button></div>
+    <div id="v-result" class="card" hidden></div>
+    <div class="block danger">
+      <h2>Roll back</h2>
+      <p>Puts the world from before Apply back. All play since Apply is lost, in every dimension. The migrated world is kept, renamed.</p>
+      <label class="tick"><input id="v-restart" type="checkbox"> I turned off anything that restarts my server by itself</label>
+      <label class="tick"><input id="v-stopped" type="checkbox"> My server or game is stopped</label>
+      <button id="v-rollback" class="danger-btn">Roll back</button>
+    </div>
+  </aside>
+  <div class="mapwrap"><div id="v-compare" class="compare"></div></div>
+</section>
+</main>
+
+<div id="error" class="modal" hidden role="alertdialog" aria-labelledby="error-title">
+  <div class="box">
+    <h2 id="error-title">That did not work</h2>
+    <p id="error-reason"></p>
+    <p><b>Next:</b> <span id="error-action"></span></p>
+    <p class="muted small">Logs: <span id="error-logs"></span></p>
+    <p class="muted small">Report a problem: <a id="error-issues" href="https://github.com/KatsuKumi/rwg2-migrator/issues" target="_blank" rel="noopener">github.com/KatsuKumi/rwg2-migrator/issues</a></p>
+    <div class="row end"><button id="error-copy">Copy diagnostic info</button><button id="error-close" class="primary">Close</button></div>
+  </div>
+</div>
+
+<div id="browser" class="modal" hidden role="dialog" aria-labelledby="browser-title">
+  <div class="box wide">
+    <h2 id="browser-title">Pick a folder</h2>
+    <div class="row"><button id="browser-up">Up</button><input id="browser-path" type="text" aria-label="Folder"><button id="browser-go">Go</button></div>
+    <ul id="browser-list" class="browser"></ul>
+    <div class="row end"><button id="browser-cancel">Cancel</button><button id="browser-use" class="primary">Use this folder</button></div>
+  </div>
+</div>
+
+<div id="confirm" class="modal" hidden role="dialog" aria-labelledby="confirm-title">
+  <div class="box">
+    <h2 id="confirm-title"></h2>
+    <p id="confirm-text"></p>
+    <div class="row end"><button id="confirm-no">Cancel</button><button id="confirm-yes" class="danger-btn"></button></div>
+  </div>
+</div>
+
+<script src="/static/leaflet/leaflet.js?t=__TOKEN__"></script>
+<script src="/static/app.js?t=__TOKEN__"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+ "about": "generator check, made from no real world: seed 12345; points = every column on the one-block ring just outside the invented square x, z in [x0, x0 + size); configs = Smooth, continental, every biome offset pair bx, bz in range(*biome) with each landmass offset lx in range(*landmass) and lz = -lx (1,000 configs); plus a render of one of them over the 2 km window around the square",
+ "seed": "12345",
+ "ring": {"x0": -320, "size": 640},
+ "configs": {"biome": [-20480, 20480, 4096], "landmass": [-16000, 16000, 3200]},
+ "render": {"config": [12288, -4096, 3200, -3200], "x0": -1024, "z0": -1024, "size": 2048, "bpp": 1}
+}
